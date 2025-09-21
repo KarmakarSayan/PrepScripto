@@ -1,0 +1,180 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-family: sans-serif;
+}
+
+.nav img {
+  height: 40px;
+}
+
+.nav ul {
+    text-decoration: none;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* @media (min-width: 768px) {
+  .nav ul {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+} */
+
+/* Remove default underline */
+.nav ul a {
+  text-decoration: none;
+  color: #0800ff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ /* Hover + active states */
+ /* .nav ul a:hover,
+.nav ul a.active {
+  color: #1a73e8;
+}  */
+
+/* Underline effect */
+.nav ul a hr {
+  border: none;
+  outline: none;
+  height: 2px;
+  width: 100%;
+  background-color: #00ff22;
+  margin-top: 4px;
+  opacity: 0; /* instead of visibility for smoother transition */
+  transition: opacity 0.3s ease;
+}
+
+.nav ul a:hover hr,
+.nav ul a.active hr {
+  opacity: 1;
+}
+
+/* Button styling */
+.nav button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #1a73e8;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav button:hover {
+  background-color: #ff0000;
+}
+
+.nav ul a li {
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation links container */
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each link item */
+.nav ul li a {
+  position: relative; /* Required for the underline pseudo-element */
+  text-decoration: none;
+  color: #4285f4; /* Initial link color */
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  padding-bottom: 5px; /* Creates space for the underline to appear */
+}
+
+/* Create the underline using a pseudo-element */
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1a73e8;
+  transform: scaleX(0); /* This hides the underline by default */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+/* On hover, change text color and animate the underline in */
+.nav ul li a:hover {
+  color: #1a73e8; /* Darker blue on hover */
+}
+
+.nav ul li a:hover::after {
+  transform: scaleX(1); /* Animate the underline to full width */
+}
+
+/* Styles for the currently active link (color only) */
+.nav ul li a.active {
+  color: #1a73e8;
+}
+.prf-sec {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;       /* directly below */
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.prf-sec:hover .dropdown {
+  display: block;
+}
+
+.drop {
+  min-width: 12rem;           /* min-w-48 */
+  background-color: #fdfdf6;  /* bg-stone-100 */
+  border-radius: 0.25rem;     /* rounded */
+  display: flex;              /* flex */
+  flex-direction: column;     /* flex-col */
+  gap: 2px;                  /* gap-4 */
+  padding: 1rem;              /* p-4 */
+}
+
+
+.drop p {
+  margin: 0.5rem 0;        /* spacing between items */
+  padding: 0.25rem 0.5rem; /* optional padding for better hover area */
+  cursor: pointer;          /* shows pointer on hover */
+  color: #333;              /* default text color */
+  border-radius: 4px;       /* optional: smooth edges on hover */
+  transition:0.2s, color 0.2s; /* smooth transition */
+}
+
+.drop p:hover {
+
+  color: #007bff;            /* text color change on hover */
+}
