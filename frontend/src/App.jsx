@@ -20,13 +20,13 @@ import Navbar from './components/Navbar.jsx';
 const App = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       {/*  this nav bar will be visible in  all the pages  */}
       <Routes>
         {/* All routes are now linked to your imported components */}
         <Route path="/" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />
-        <Route path="/doctors/:speciality" element={<Doctors />} />
+        <Route path="/doctors/:speciality" element={<Doctors />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

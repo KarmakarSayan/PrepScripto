@@ -1,0 +1,58 @@
+/* --- Main container for the whole section --- */
+#speciality {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem; /* Adds vertical and horizontal spacing */
+  gap: 1rem;          /* Adds space between the title, paragraph, and list */
+}
+
+#speciality h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Limit the width of the paragraph for better readability */
+#speciality > p {
+  max-width: 60ch; /* Limits width to about 60 characters */
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* --- Container for the grid of speciality items --- */
+.speciality-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;       /* Allows items to wrap to the next line on smaller screens */
+  gap: 2rem;             /* Space between each speciality item */
+  margin-top: 2rem;      /* Extra space above the list of items */
+}
+
+
+/* --- Individual speciality item (the Link tag) --- */
+.speciality-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;          /* Space between the image and the text below it */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.speciality-item:hover {
+  transform: scale(1.05); /* Slightly enlarges the item on hover */
+}
+
+
+/* --- Styling for the images inside each item --- */
+.speciality-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;   /* Makes the images circular */
+  object-fit: cover;    /* Prevents the image from being stretched or squashed */
+  border: 4px solid #f0f0f0; /* Optional: adds a light gray border */
+}
