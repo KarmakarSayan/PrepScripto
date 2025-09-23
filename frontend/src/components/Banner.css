@@ -1,0 +1,87 @@
+/* --- Main Banner Container --- */
+.banner {
+  display: flex;
+  align-items: center; /* Vertically aligns the text and image */
+  background: linear-gradient(105deg, #5D5FEF 0%, #3C54F1 100%);
+  border-radius: 1.5rem; /* Smoother, larger border radius */
+  box-shadow: 0 10px 30px rgba(60, 84, 241, 0.2);
+  
+  /* For correct centering and responsive width */
+  width: 90%;
+  max-width: 1200px;
+  margin: 5rem auto; /* Sets top/bottom margin and centers horizontally */
+  padding: 3rem;
+  gap: 2rem; /* Space between the text and image columns */
+}
+
+
+/* --- Left Side (Text & Button) --- */
+.banner-left {
+  flex: 1 1 55%; /* Takes up ~55% of the width, allows shrinking */
+  color: #ffffff;
+}
+
+.banner-headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.banner-subhead {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 1rem 0 2rem 0;
+}
+
+.banner-cta-button {
+  background-color: #ffffff;
+  color: #3C54F1; /* Blue text to match the background */
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 50px; /* Pill shape */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.banner-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* --- Right Side (Image) --- */
+.banner-right {
+  flex: 1 1 45%; /* Takes up ~45% of the width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 400px; /* Prevents the image from getting too large */
+  height:  auto; /* Maintains the image's aspect ratio */
+}
+
+
+/* --- Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .banner-headline {
+    font-size: 2.5rem;
+  }
+  
+  .banner-right {
+    margin-top: 2rem; /* Add space between text and image */
+  }
+}

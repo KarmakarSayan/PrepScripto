@@ -1,0 +1,98 @@
+/* --- Main Footer Container --- */
+.footer {
+  background-color: #ffffff;
+  color: #5a6475; /* A soft, dark grey for text */
+  font-family: sans-serif;
+  padding: 4rem 0 2rem 0;
+  border-top: 1px solid #e9ecef; /* A very light top border */
+}
+
+/* --- Content Wrapper (for the 3 columns) --- */
+.footer-content {
+  display: grid;
+  /* On desktops, create 3 columns. The first is wider. */
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 3rem; /* Space between columns */
+  
+  /* Center the content and limit its width */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- General styles for each section/column --- */
+.footer-section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c273a; /* Darker color for headings */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- About Section (Column 1) --- */
+.footer-section.about .logo-image {
+  width: 160px; /* Control the size of your logo */
+  margin-bottom: 1.5rem;
+}
+
+.footer-section.about p {
+  line-height: 1.7;
+}
+
+/* --- Links Section (Column 2) --- */
+.footer-section.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section.links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section.links a {
+  color: #5a6475;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-section.links a:hover {
+  color: #3C54F1; /* Your brand's primary color */
+}
+
+/* --- Contact Section (Column 3) --- */
+.footer-section.contact p {
+  margin: 0 0 0.75rem 0;
+}
+
+/* --- Divider and Copyright --- */
+.footer-divider {
+  border: none;
+  height: 1px;
+  background-color: #e9ecef;
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto; /* Space above and below the line */
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7a8291;
+}
+
+/* --- Responsive Styles for Mobile & Tablet --- */
+@media (max-width: 768px) {
+  .footer-content {
+    /* Stack the columns on top of each other */
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-section.about .logo-image {
+    /* Center the logo when stacked */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

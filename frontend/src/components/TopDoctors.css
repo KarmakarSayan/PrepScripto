@@ -121,3 +121,48 @@
     font-weight: 500;
     margin: 0;
 }
+
+
+.but {
+  background-color: #3c54f1;   /* bg-blue-50 */
+  color: #ffffff;             /* text-gray-600 */
+  padding-left: 3rem;         /* px-12 */
+  padding-right: 3rem;
+  padding-top: 0.75rem;       /* py-3 */
+  padding-bottom: 0.75rem;
+  border-radius: 9999px;      /* rounded-full */
+  margin-top: 2.5rem;         /* mt-10 */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect (like hover:bg-blue-100 hover:text-gray-700) */
+.but:hover {
+  background-color: #dbeafe;  /* lighter blue */
+  color: #374151;             /* darker gray */
+}
+
+/* Active/pressed state (like active:bg-blue-200) */
+.but:active {
+  background-color: #bfdbfe;  /* deeper blue */
+  transform: scale(0.98);
+}
+
+/* Responsive handling */
+@media (max-width: 768px) {
+  .but {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .but {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+}

@@ -4,7 +4,7 @@ const Doctor= ()=>
 {
     return(
         <>
-        <Navbar/>
+        {/* <Navbar/> */}
         </>
     )
 }

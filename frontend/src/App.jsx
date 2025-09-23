@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
-// Importing all your page components from the pages directory
+
 import Home from './pages/Home.jsx';
 import Doctors from './pages/Doctors.jsx';
 import Login from './pages/Login.jsx';
@@ -12,6 +12,7 @@ import MyProfile from './pages/MyProfile.jsx';
 import MyAppointments from './pages/MyAppointments.jsx';
 import Appointments from './pages/Appointments.jsx';
 import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 
 
 
@@ -20,10 +21,10 @@ import Navbar from './components/Navbar.jsx';
 const App = () => {
   return (
     <div>
-      {/* <Navbar/> */}
-      {/*  this nav bar will be visible in  all the pages  */}
+      <Navbar/>
+      
       <Routes>
-        {/* All routes are now linked to your imported components */}
+      
         <Route path="/" element={<Home />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/doctors/:speciality" element={<Doctors />} /> 
@@ -33,11 +34,13 @@ const App = () => {
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/my-appointments" element={<MyAppointments />} />
         <Route path="/appointment/:docId" element={<Appointments />} />
-      </Routes>
+        
+      </Routes><br /><br /><br /><br /><br /><br />
+
+      <Footer/>
     </div>
   );
 };
 
-// The <BrowserRouter> should be in your main.jsx or index.js file.
 export default App;
 
