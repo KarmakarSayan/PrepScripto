@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className='nav'>
             {/* Logo */}
-            <img src={assets.logo} alt="Prescripto Logo" className="logo-image" />
+            <img  onClick={()=>navigate('/')} src={assets.logo} alt="Prescripto Logo" className="logo-image" />
 
             {/* Hamburger for mobile */}
             <div className="hamburger" onClick={() => setShowMenu(!showMenu)}>

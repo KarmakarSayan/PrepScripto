@@ -3,8 +3,9 @@
   background-color: #ffffff;
   color: #5a6475; /* A soft, dark grey for text */
   font-family: sans-serif;
-  padding: 4rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
   border-top: 1px solid #e9ecef; /* A very light top border */
+  margin-top: 8rem;
 }
 
 /* --- Content Wrapper (for the 3 columns) --- */
@@ -58,7 +59,7 @@
 }
 
 .footer-section.links a:hover {
-  color: #3C54F1; /* Your brand's primary color */
+  color: #3C54F1; 
 }
 
 /* --- Contact Section (Column 3) --- */
@@ -77,6 +78,7 @@
 }
 
 .footer-copyright {
+  margin-top: 3rem  ;
   text-align: center;
   font-size: 0.9rem;
   color: #7a8291;

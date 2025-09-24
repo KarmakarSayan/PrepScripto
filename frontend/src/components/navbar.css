@@ -12,6 +12,7 @@
 
 .nav img {
   height: 40px;
+  cursor: pointer;
 }
 
 .nav ul {

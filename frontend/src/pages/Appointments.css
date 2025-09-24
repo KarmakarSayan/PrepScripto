@@ -1,0 +1,219 @@
+/* --- Main Appointments Page Container --- */
+.appointments-page {
+  width: 90%;
+  max-width: 960px;
+  margin: 3rem auto;
+  font-family: sans-serif;
+}
+
+/* --- Doctor Details Section (Top Card) --- */
+.doctor-details-card {
+  display: flex;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.doctor-image-container {
+  flex: 0 0 200px;
+}
+
+.doctor-image {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+.doctor-name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1c273a;
+  margin: 0;
+}
+
+.verified-icon {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.doctor-speciality, .doctor-experience {
+  font-size: 0.9rem;
+  color: #5a6475;
+  background-color: #f8f9fa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.doctor-about {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.doctor-fee {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1c273a;
+}
+
+/* --- Booking Slots Section --- */
+.booking-slots {
+  margin-top: 3rem;
+}
+
+.booking-slots h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c273a;
+  margin-bottom: 1.5rem;
+}
+
+/* Date Selection */
+.date-slots {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.date-slot {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e7ff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.date-slot:hover {
+  background-color: #eef2ff;
+}
+
+.date-slot.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+.date-day {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.date-number {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Time Selection */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.time-slot {
+  text-align: center;
+  padding: 0.75rem;
+  border: 1px solid #e0e7ff;
+  border-radius: 0.5rem;
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-slot:hover {
+  background-color: #eef2ff;
+}
+
+.time-slot.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+/* Book Appointment Button */
+.book-appointment-btn {
+  display: block;
+  width: 100%;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.book-appointment-btn:hover {
+  background-color: #4338ca;
+}
+
+/* --- Related Doctors Section --- */
+.related-doctors {
+  margin-top: 4rem;
+  border-top: 1px solid #e9ecef;
+  padding-top: 3rem;
+}
+
+.related-doctors h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1c273a;
+  margin-bottom: 0.5rem;
+}
+
+.related-doctors-subtitle {
+  text-align: center;
+  color: #5a6475;
+  margin-bottom: 2rem;
+}
+
+.related-doctors-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .doctor-details-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doctor-image-container {
+    width: 150px;
+    margin: 0 auto;
+  }
+  .doctor-name-container {
+    justify-content: center;
+  }
+  .date-slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

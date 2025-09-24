@@ -1,0 +1,137 @@
+/* --- Main Doctors Page Container --- */
+.doctors-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  font-family: sans-serif;
+}
+
+.doctors-page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c273a;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+/* --- Main content area (Filter + Grid) --- */
+.doctors-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start; /* Aligns items to the top */
+}
+
+/* --- Speciality Filter (Left Column) --- */
+.speciality-filter {
+  flex: 0 0 220px; /* Prevents filter from growing/shrinking */
+  position: sticky; /* Makes the filter stick on scroll */
+  top: 2rem;
+}
+
+.speciality-filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.speciality-filter li {
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e7ff;
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.speciality-filter li:hover {
+  background-color: #eef2ff;
+}
+
+.speciality-filter li.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+/* --- Doctors Grid (Right Column) --- UPDATED --- */
+.doctors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers the cards in the row */
+  gap: 1.5rem;
+}
+
+/* --- Individual Doctor Card (reusable) --- UPDATED --- */
+.doctor-card {
+  flex: 0 0 250px; /* This sets a fixed width and prevents stretching */
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f8f9fa; /* Placeholder color */
+}
+
+.doctor-card-info {
+  padding: 1rem;
+}
+
+.doctor-card-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #16a34a; /* Green */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-card-status::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #16a34a;
+}
+
+.doctor-card-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1c273a;
+  margin: 0.5rem 0;
+}
+
+.doctor-card-speciality {
+  font-size: 0.9rem;
+  color: #5a6475;
+}
+
+
+/* --- Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+  .doctors-content {
+    flex-direction: column; /* Stack filter and grid */
+  }
+
+  .speciality-filter {
+    position: static; /* Unstick the filter on mobile */
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
