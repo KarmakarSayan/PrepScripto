@@ -1,5 +1,3 @@
-// src/pages/Doctors.jsx
-
 import React, { useContext, useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { AppContext } from '../context/AppContext.jsx';
@@ -10,7 +8,11 @@ const Doctors = () => {
   const { speciality: urlSpeciality } = useParams();
   const { doctors } = useContext(AppContext);
 
-  // State to manage the active filter
+  // Safeguard against missing data
+  if (!doctors || doctors.length === 0) {
+    return <div style={{ textAlign: 'center', margin: '4rem' }}>Loading doctors...</div>;
+  }
+
   const [activeFilter, setActiveFilter] = useState(urlSpeciality || 'All');
 
   // Effect to update the filter if the URL parameter changes
@@ -21,13 +23,13 @@ const Doctors = () => {
   // Create a unique list of all specialities from the doctors data
   const allSpecialities = useMemo(() => {
     const specialities = doctors.map(doc => doc.speciality);
-    return ['All', ...new Set(specialities)]; // Add "All" to the beginning
+    return ['All', ...new Set(specialities)];
   }, [doctors]);
 
   // Filter the doctors based on the active filter
   const filteredDoctors = useMemo(() => {
     if (activeFilter === 'All') {
-      return doctors; // Show all doctors
+      return doctors;
     }
     return doctors.filter(doctor => doctor.speciality === activeFilter);
   }, [doctors, activeFilter]);
@@ -36,7 +38,6 @@ const Doctors = () => {
     <div className='doctors-page'>
       <h1 className='doctors-page-title'>Browse through the doctors specialist</h1>
       <div className='doctors-content'>
-        {/* Left Side Filter */}
         <div className='speciality-filter'>
           <ul>
             {allSpecialities.map((speciality) => (
@@ -50,11 +51,9 @@ const Doctors = () => {
             ))}
           </ul>
         </div>
-
-        {/* Right Side Grid */}
         <div className='doctors-grid'>
           {filteredDoctors.map(doctor => (
-            <DoctorCard key={doctor.id} doctor={doctor} />
+            <DoctorCard key={doctor._id} doctor={doctor} />
           ))}
         </div>
       </div>
@@ -63,3 +62,4 @@ const Doctors = () => {
 };
 
 export default Doctors;
+

@@ -1,0 +1,136 @@
+/* --- Main My Appointments Page Container --- */
+.my-appointments-page {
+  width: 90%;
+  max-width: 960px;
+  margin: 3rem auto;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.appointments-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1c273a;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* --- List of Appointments --- */
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Individual Appointment Card --- */
+.appointment-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.appointment-doctor-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.appointment-details {
+  flex-grow: 1; /* Takes up the available space */
+}
+
+.appointment-details .doctor-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1c273a;
+  margin: 0;
+}
+
+.appointment-details .doctor-speciality {
+  font-size: 0.9rem;
+  color: #5a6475;
+  margin-bottom: 1rem;
+}
+
+.appointment-details .detail-item {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 0.25rem 0;
+}
+
+/* --- Action Buttons --- */
+.appointment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.action-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all 0.2s ease-in-out;
+  min-width: 160px;
+  text-align: center;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  color: #7a8291;
+  border-color: #ced4da;
+}
+
+.cancel-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.pay-btn {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+}
+
+.pay-btn:hover {
+  background-color: #4338ca;
+}
+
+.paid-btn {
+  background-color: #e0f2fe;
+  color: #0c4a6e;
+  border-color: #bae6fd;
+  cursor: not-allowed;
+}
+
+.no-appointments {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5a6475;
+  padding: 3rem;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 640px) {
+  .appointment-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .appointment-actions {
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .action-btn {
+    width: 100%;
+  }
+}

@@ -60,26 +60,32 @@ export const assets = {
 
 export const specialityData = [
     {
+        _id: 'spec1', // --- FIX: Added unique ID ---
         speciality: 'General physician',
         image: General_physician
     },
     {
+        _id: 'spec2', // --- FIX: Added unique ID ---
         speciality: 'Gynecologist',
         image: Gynecologist
     },
     {
+        _id: 'spec3', // --- FIX: Added unique ID ---
         speciality: 'Dermatologist',
         image: Dermatologist
     },
     {
+        _id: 'spec4', // --- FIX: Added unique ID ---
         speciality: 'Pediatricians',
         image: Pediatricians
     },
     {
+        _id: 'spec5', // --- FIX: Added unique ID ---
         speciality: 'Neurologist',
         image: Neurologist
     },
     {
+        _id: 'spec6', // --- FIX: Added unique ID ---
         speciality: 'Gastroenterologist',
         image: Gastroenterologist
     },
@@ -219,7 +225,7 @@ export const doctors = [
         speciality: 'Pediatricians',
         degree: 'MBBS',
         experience: '2 Years',
-        about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, a early diagnosis, and effective treatment strategies.',
         fees: 40,
         address: {
             line1: '47th Cross, Richmond',
